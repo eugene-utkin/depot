@@ -13,6 +13,16 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should test products" do
+    get products_url
+    assert_response :success
+
+    assert_select 'nav.side_nav a', minimum: 4
+    assert_select 'main table tr', 3
+    assert_select 'dt', 'Programming Ruby 1.9'
+
+  end
+
   test "should get new" do
     get new_product_url
     assert_response :success
