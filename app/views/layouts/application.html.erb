@@ -18,7 +18,9 @@
 		<section class="content">
 			<nav class="side_nav">
 				<div id="cart" class="carts">
-					<%= render @cart %>
+					<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+						<%= render @cart %>
+					<% end %>
 				</div>
 
 				<ul>
