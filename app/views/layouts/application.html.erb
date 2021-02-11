@@ -17,13 +17,11 @@
 		</header>
 		<section class="content">
 			<nav class="side_nav">
-				<% if @cart %>
-					<div id="cart" class="carts">
-						<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-							<%= render @cart %>
-						<% end %>
-					</div>
-				<% end %>
+
+				<div id="cart" class="carts">
+
+					<%= render_if @cart && @cart.line_items.any?, @cart %>
+				</div>
 
 				<ul>
 					<li><a href="/">Home</a></li>
@@ -32,6 +30,7 @@
 					<li><a href="/contact">Contact</a></li>
 				</ul>
 			</nav>
+			
 			<main class='<%= controller.controller_name %>'>
 				<%= yield %>
 			</main>
