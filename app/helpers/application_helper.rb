@@ -1,8 +1,8 @@
 module ApplicationHelper
-def hidden_div_if(condition, attributes = {}, &block)
-  if condition
-    attributes["style"] = "display: none"
+  def render_if(condition, record)
+    if condition
+      render record
+    end
   end
-  content_tag("div", attributes, &block)
 end
-end
+
