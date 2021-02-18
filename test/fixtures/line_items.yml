@@ -1,9 +1,10 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# Read about fixtures at
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  product: two
-  cart: one
+  product: ruby
+  order: one
 
 two:
-  product: two
-  cart: two
+  product: ruby
+  cart: one
