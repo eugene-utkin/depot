@@ -10,9 +10,9 @@ consumer.subscriptions.create("ProductsChannel", {
   },
 
   received(data) {
-	const storeElement = document.querySelector("main.store")
-	if (storeElement) {
+	 const storeElement = document.querySelector("main.store")
+	 if (storeElement) {
 		storeElement.innerHTML = data.html
-	}
+	 }
   }
 });
