@@ -4,4 +4,4 @@ test "should create order" do
       name: @order.name, pay_type: @order.pay_type }
   end
   assert_redirected_to store_path
-end 
+end
