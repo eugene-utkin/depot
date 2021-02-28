@@ -3,7 +3,6 @@
 		<aside id="notice"><%= notice %></aside>
 	<% end %>
 
-<% unless cart.line_items.empty? %>
 	<h2>Your Cart</h2>
 	<table>
 	
@@ -17,9 +16,13 @@
 		</tfoot>
 		
 	</table>
-	<%= button_to "Checkout", new_order_path, method: :get %>
+ 
+	<div class="actions">
 		<%= button_to 'Empty cart', cart,
-				method: :delete,
-				data: { confirm: 'Are you sure?' } %>
-<% end %>
+			method: :delete,
+			data: { confirm: 'Are you sure?' } %>
+		<%= button_to 'Checkout', new_order_path,
+			method: :get,
+			class: "checkout"%>
+	</div>
 </article>
