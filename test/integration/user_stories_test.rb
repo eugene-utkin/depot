@@ -6,7 +6,8 @@ class UserStoriesTest < ActionDispatch::IntegrationTest
   LineItem.delete_all
   Order.delete_all
   ruby_book = products(:ruby)
-  # test "the truth" do
-  #   assert true
-  # end
+
+  get "/"
+  assert_response :success
+  assert_template "index"
 end
