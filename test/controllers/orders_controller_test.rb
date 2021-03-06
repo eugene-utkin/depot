@@ -6,10 +6,11 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "requires item in cart" do
-    get :new
-    assert_redirected_to store_path
+    get new_order_url
+    assert_redirected_to store_index_path
     assert_equal flash[:notice], 'Your cart is empty'
   end
+
 
   test "should get index" do
     get orders_url
@@ -17,14 +18,12 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    item = LineItem.new
-    item.build_cart
-    item.product = products(:ruby)
-    item.save!
-    session[:cart_id] = item.cart.id
-    get :new
+    post line_items_url, params: { product_id: products(:ruby).id }
+
+    get new_order_url
     assert_response :success
   end
+
 
   test "should create order" do
     assert_difference('Order.count') do
