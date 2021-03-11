@@ -6,7 +6,6 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  get 'admin/index'
   resources :users
   resources :orders
   resources :line_items
