@@ -11,7 +11,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     assert_equal flash[:notice], 'Your cart is empty'
   end
 
-
   test "should get index" do
     get orders_url
     assert_response :success
@@ -23,7 +22,6 @@ class OrdersControllerTest < ActionDispatch::IntegrationTest
     get new_order_url
     assert_response :success
   end
-
 
   test "should create order" do
     assert_difference('Order.count') do
