@@ -2,9 +2,9 @@
 # http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  product: ruby
-  order: one
+  product: two
+  cart: one
 
 two:
   product: ruby
-  cart: one
+  order: one
