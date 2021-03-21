@@ -11,6 +11,14 @@ es:
       questions: "Preguntas"
       news: "Noticias"
       contact: "Contacto"
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
   store:
     index:
       title_html: "Su Cat&aacute;logo de Pragmatic"
