@@ -42,6 +42,14 @@ en:
       questions: "Questions"
       news: "News"
       contact: "Contact"
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
   store:
     index:
       title_html: "Your Pragmatic Catalog"
