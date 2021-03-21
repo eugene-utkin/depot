@@ -1,4 +1,9 @@
 es:
+  carts:
+    cart:
+      title: "Carrito de la Compra"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
   layouts:
     application:
       title: "Publicaciones de Pragmatic"
