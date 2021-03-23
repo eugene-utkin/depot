@@ -61,9 +61,9 @@ en:
       pay_prompt_html: "Select a payment method"
       submit: "Place Order"
 
-  thanks: "Thank you for your order"
-  
   store:
     index:
       title_html: "Your Pragmatic Catalog"
       add_html: "Add to Cart"
+
+  thanks: "Thank you for your order"
